@@ -45,9 +45,9 @@ export const CategoryFilter = ({
         <Button
           key={`${category.id}-${index}`}
           className={cn(
-            'text-md border-primary-purple/80 text-primary-purple/80 flex items-center justify-center rounded-full border bg-white hover:bg-white',
+            'text-md flex items-center justify-center rounded-full border border-primary-purple/80 bg-white text-primary-purple/80 hover:bg-white',
             categoryId === category.id &&
-              'bg-primary-purple/80 hover:bg-primary-purple/60 text-white',
+              'bg-primary-purple/80 text-white hover:bg-primary-purple/60',
           )}
           onClick={() =>
             handleChangeCategory(

@@ -27,7 +27,7 @@ export const CatCard = ({ cat, disabled }: CatCardProps) => {
 
       <div className="pointer-events-none h-10 px-[10px] py-2">
         {!!cat.breeds?.length && (
-          <p className="text-md text-primary-purple text-center font-bold">
+          <p className="text-md text-center font-bold text-primary-purple">
             {cat.breeds[0].name}
           </p>
         )}
