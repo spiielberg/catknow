@@ -4,16 +4,14 @@ import { CatCard } from '@/app/components/cat-card'
 import { Loading } from '@/app/components/loading'
 import { Cat } from '@/app/types/cat.type'
 import { useCat } from '@/hooks/useCat'
-import { useEffect, useState } from 'react'
+import { use, useEffect, useState } from 'react'
 
 interface CatPageProps {
-  params: {
-    id: string
-  }
+  params: Promise<{ id: string }>
 }
 
 const CatPage = ({ params }: CatPageProps) => {
-  const { id } = params
+  const { id } = use(params)
 
   const [cat, setCat] = useState<Cat>()
   const [isLoading, setIsLoading] = useState(true)
