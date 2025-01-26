@@ -13,7 +13,7 @@ export const CatCard = ({ cat, disabled }: CatCardProps) => {
     <Link
       href={!disabled ? `/cat/${cat.id}` : ''}
       className={cn(
-        'border-primary-purple flex flex-col items-stretch overflow-hidden rounded-2xl border',
+        'flex flex-col items-stretch overflow-hidden rounded-2xl border border-primary-purple',
         !disabled && 'cursor-pointer',
       )}
     >
